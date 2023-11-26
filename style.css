@@ -4,7 +4,11 @@
   box-sizing: border-box;
   font-size: 16px;
 }
-
+#dataPrice {
+  color: white;
+  font-size: 20px;
+  text-align: center;
+}
 body {
   background-color: black;
   height: 100vh;
@@ -16,7 +20,7 @@ header h1 {
   text-shadow: 0px -2px 11px white;
   -webkit-background-clip: text;
   text-align: center;
-  margin-top: 10px;
+  padding-top: 10px;
   -webkit-text-fill-color: transparent;
 }
 
@@ -36,7 +40,11 @@ main .wallet {
   -5px 5px 40px turquoise, /* Ombre avec une couleur plus claire (orange) */
   5px 5px 60px deepskyblue;
 }
-
+.walletPrice {
+  display: none;
+  color: white;
+  text-align: center;
+}
 footer p {
   font-weight: bold;
   letter-spacing: 1px;
@@ -50,6 +58,4 @@ footer p {
   -webkit-text-fill-color: transparent;
   font-family: monospace;
   width: max-content;
-  text-shadow: 5px 5px red,
-  10px 5px blue
 }
