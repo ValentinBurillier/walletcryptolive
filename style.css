@@ -25,15 +25,15 @@ header h1 {
 }
 
 main .wallet {
-  width: 300px;
-  height: 300px;
+  width: 275px;
+  height: 275px;
   border: 1px solid white;
   margin-left: auto;
   margin-right: auto;
   position: absolute;
   transform: translate(-50%, -50%);
   left: 50%;
-  top: 50%;
+  top: 40%;
   border-radius: 10%;
   box-shadow:
   5px 5px 20px white, /* Ombre principale (rouge) */
@@ -41,9 +41,55 @@ main .wallet {
   5px 5px 60px deepskyblue;
 }
 .walletPrice {
-  display: none;
   color: white;
   text-align: center;
+  height: 10%;
+  font-size: 1.5rem;
+  padding-top: 5px;
+}
+.choiceCrypto {
+  font-size: 1.4rem;
+}
+/* FORMULAIRE */
+form {
+  display: flex;
+  flex-direction: column;
+  height: 70%;
+  max-height: 70%;
+  align-items: center;
+  justify-content: space-around;
+}
+form label {
+  color: white;
+  font-size: 1.3rem;
+}
+form .firstInput {
+  background: none;
+  border: 1px solid white;
+  padding: 5px;
+  border-radius: 5%;
+  color: white;
+}
+form .secondInput {
+  background: none;
+  color: white;
+  padding: 5px;
+  border: none;
+  font-size: 1.3rem;
+  letter-spacing: 1px;
+
+}
+.selectCoin {
+  height: 20%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  column-gap: 20px;
+}
+.iconCrypto {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
 }
 footer p {
   font-weight: bold;

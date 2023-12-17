@@ -15,7 +15,21 @@
   <!--MAIN PART-->
   <main>
     <section class="wallet">
-      <h2 class="walletPrice">Cours actuel :</h2>
+      <h2 class="walletPrice">Cours actuel :<span id="choiceCrypto"></span></h2>
+      <form>
+        <label>Quantité :</label>
+        <input type="number" name="solanaQuantity" id="solanaQuantity" class="firstInput">
+        <input type="button" value="valider" class="secondInput">
+      </form>
+      <section class="selectCoin">
+        <img src="./assets/images/solana_icon.png" alt="icone solana blockchain" class="iconCrypto iconSolana">
+        <img src="./assets/images/ada_icon.png" alt="icone ada blockchain" class="iconCrypto iconAda">
+        <img src="./assets/images/avax_icon.png" alt="icone avax blochain" class="iconCrypto iconAvax">
+      </section>
+    </section>
+
+    <section id="sectionValueWallet">
+      <h2>Valeur du portfeuille :<span id="valueWallet"></span></h2>
     </section>
   </main>
 
