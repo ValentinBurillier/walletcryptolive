@@ -34,7 +34,6 @@ imgIcon.forEach((element) => {
     const idCrypto = element.id;
     
     function request(cryptoElement) {
-      console.log(spanPrice);
       const xhr = new XMLHttpRequest();
       xhr.onreadystatechange = function() {
         if (xhr.readyState === XMLHttpRequest.DONE) {
@@ -54,4 +53,30 @@ imgIcon.forEach((element) => {
     
     request(idCrypto);
   })
+})
+
+//SOUMISSION FORMULAIRE
+const btnForm = document.querySelector('#btnForm');
+btnForm.addEventListener('click', () => {
+
+  //1ère étape : on récupère la valeur du champ du formulaire
+  const valueForm = document.querySelector('#solanaQuantity').value; //string value
+
+  //2ème étape : on récupère la crypto sélectionnée
+  const allImgIcon = document.querySelectorAll('.iconCrypto');
+  const cryptoSelected = function(cryptos) {
+    allImgIcon.forEach((e) => {
+      if(e.style.borderBottom === "3px solid gold") {
+        const cryptoMoment = e.id;
+        
+        //3ème étape : Création du cookie
+        function setCookie(crypto, value) {
+          document.cookie = `${crypto}=${value}`;
+          console.log(document.cookie);
+        }
+        setCookie(cryptoMoment, valueForm);
+      }
+    })
+  }
+  cryptoSelected(allImgIcon);
 })
