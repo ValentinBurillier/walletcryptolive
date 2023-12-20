@@ -80,3 +80,34 @@ btnForm.addEventListener('click', () => {
   }
   cryptoSelected(allImgIcon);
 })
+
+//Au démarage de la page : 1ère étape : on récupère les cookies dans un tableau.
+function getCookie() {
+  const cookiesArray = document.cookie.split(';'); //Récupère tous les cookies
+  const allCrypto = document.querySelectorAll('.iconCrypto'); //GET ALL ID CRYPTOS
+  const idCryptos = []
+  allCrypto.forEach((element) => {
+    idCryptos.push(element.id);
+  })
+  //On récupère les valeurs des cookies par rapports aux id cryptos.
+  const valueCryptos = [];
+  idCryptos.forEach((element) => {
+    valueCryptos.push(getCookieValue(element));
+  })
+  console.log(idCryptos);
+  console.log(valueCryptos);
+}
+
+getCookie();
+function getCookieValue(name) {
+  const cookies = document.cookie.split(';');
+  for (let i = 0; i < cookies.length; i++) {
+    const cookie = cookies[i].trim();
+    // Vérifier si ce cookie correspond au nom recherché
+    if (cookie.startsWith(name + '=')) {
+      return cookie.substring(name.length + 1);
+    }
+  }
+  // Si le cookie n'est pas trouvé, retourner une chaîne vide ou une valeur par défaut
+  return '';
+}
